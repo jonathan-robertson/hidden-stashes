@@ -1,0 +1,9 @@
+<xml>
+    <ModInfo>
+        <Name value="Camo Chests" />
+        <Description value="Hide chests in plain sight or use terrain camo to defeat xray" />
+        <Author value="Jonathan Robertson" />
+        <Version value="0.0.1" />
+        <Website value="https://github.com/raid-teams/camo-chests" />
+    </ModInfo>
+</xml>

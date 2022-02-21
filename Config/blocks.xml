@@ -1,0 +1,23 @@
+<config>
+    <append xpath="/blocks">
+        <block name="camoChestTerrDirt">
+            <property name="Extends" value="terrDirt" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrDirt" />
+
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="SecureLoot" />
+            <property name="LootList" value="playerStorage" />
+            <property name="Stacknumber" value="1" />
+            <property name="DowngradeBlock" value="cntStorageChest" />
+        </block>
+        <block name="camoChestTerrTopSoil">
+            <property name="Extends" value="terrTopSoil" param1="DescriptionKey" />
+
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="SecureLoot" />
+            <property name="LootList" value="playerStorage" />
+            <property name="Stacknumber" value="1" />
+            <property name="DowngradeBlock" value="cntStorageChest" />
+        </block>
+    </append>
+</config>

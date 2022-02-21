@@ -1,0 +1,7 @@
+Key,File,Type,english
+
+camoChestTerrDirt,blocks,Terrain,Camo Chest in Dirt
+camoChestTerrDirtDesc,blocks,Terrain,"A dirt block with a chest hidden inside, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination."
+
+camoChestTerrTopSoil,blocks,Terrain,Camo Chest in Topsoil
+camoChestTerrTopSoilDesc,blocks,Terrain,"A topsoil block with a chest hidden inside, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination."

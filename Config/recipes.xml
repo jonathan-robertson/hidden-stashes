@@ -1,0 +1,12 @@
+<config>
+    <append xpath="/recipes">
+        <recipe name="camoChestTerrDirt" count="1" craft_time="3">
+            <ingredient name="cntSecureStorageChest" count="1" />
+            <ingredient name="terrDirt" count="1" />
+        </recipe>
+        <recipe name="camoChestTerrTopSoil" count="1" craft_time="3">
+            <ingredient name="cntSecureStorageChest" count="1" />
+            <ingredient name="terrTopSoil" count="1" />
+        </recipe>
+    </append>
+</config>
