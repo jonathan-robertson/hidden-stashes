@@ -7,7 +7,6 @@
             <property name="ItemTypeIcon" value="treasure" />
             <property name="Class" value="SecureLoot" />
             <property name="LootList" value="playerStorage" />
-            <property name="Stacknumber" value="1" />
             <property name="DowngradeBlock" value="cntStorageChest" />
         </block>
         <block name="camoChestTerrTopSoil">
@@ -16,7 +15,6 @@
             <property name="ItemTypeIcon" value="treasure" />
             <property name="Class" value="SecureLoot" />
             <property name="LootList" value="playerStorage" />
-            <property name="Stacknumber" value="1" />
             <property name="DowngradeBlock" value="cntStorageChest" />
         </block>
     </append>
