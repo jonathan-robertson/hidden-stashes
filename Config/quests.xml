@@ -1,0 +1,57 @@
+<config>
+    <set xpath="/quests/quest[@id='quest_BasicSurvival8']/reward[@type='Quest']/@id">quest_CamoChests</set>
+    <append xpath="/quests">
+        <quest id="quest_CamoChests">
+            <property name="group_name_key" value="quest_BasicSurvival" />
+            <property name="name_key" value="quest_CamoChests" />
+            <property name="subtitle_key" value="quest_CamoChests_subtitle" />
+            <property name="description_key" value="quest_CamoChests_description" />
+            <property name="icon" value="ui_game_symbol_foliage" />
+            <property name="category_key" value="quest" />
+            <property name="difficulty" value="veryeasy" />
+            <property name="shareable" value="false" />
+
+            <objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1">
+                <modifier type="TrackBlocks">
+                    <property name="block_index_name" value="quest_stone" />
+                    <property name="nav_object" value="quest_resource" />
+                    <property name="track_distance" value="20" />
+                </modifier>
+            </objective>
+            <objective type="FetchKeep" id="resourceWood" value="3" phase="1">
+                <modifier type="TrackBlocks">
+                    <property name="block_index_name" value="quest_wood" />
+                    <property name="nav_object" value="quest_resource" />
+                    <property name="track_distance" value="20" />
+                </modifier>
+            </objective>
+            <objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1" />
+
+            <objective type="Craft" id="meleeToolShovelT0StoneShovel" value="1" phase="2" />
+
+            <objective type="FetchKeep" id="resourceYuccaFibers" value="5" phase="3" />
+            <objective type="FetchKeep" id="resourceClayLump" value="32" phase="3" />
+            <objective type="FetchKeep" id="resourceWood" value="10" phase="3">
+                <modifier type="TrackBlocks">
+                    <property name="block_index_name" value="quest_wood" />
+                    <property name="nav_object" value="quest_resource" />
+                    <property name="track_distance" value="20" />
+                </modifier>
+            </objective>
+
+            <objective type="Craft" id="cntSecureStorageChest" value="1" phase="4" />
+            <objective type="Craft" id="terrDirt" value="1" phase="4" />
+
+            <objective type="Craft" id="camoChestTerrDirt" value="1" phase="5" />
+            <objective type="Craft" id="terrTopSoil" value="1" phase="5" />
+            <objective type="Craft" id="plantedtreeGrassSeed1" value="1" phase="5" />
+
+            <objective type="BlockPlace" id="camoChestTerrDirt" value="1" phase="6" />
+            <objective type="BlockPlace" id="terrTopSoil" value="1" phase="7" />
+            <objective type="BlockPlace" id="plantedtreeGrassSeed1" value="1" phase="8" />
+
+            <reward type="Exp" value="50" />
+            <reward type="Quest" id="quest_whiteRiverCitizen1" />
+        </quest>
+    </append>
+</config>
