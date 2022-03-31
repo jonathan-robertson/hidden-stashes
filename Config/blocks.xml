@@ -6,16 +6,16 @@
 
             <property name="ItemTypeIcon" value="treasure" />
             <property name="Class" value="SecureLoot" />
-            <property name="LootList" value="playerStorage" />
-            <property name="DowngradeBlock" value="cntStorageChest" />
+            <property name="LootList" value="storageCrate" />
+            <property name="DowngradeBlock" value="cntStorageGenericInsecure" />
         </block>
         <block name="camoChestTerrTopSoil">
             <property name="Extends" value="terrTopSoil" param1="DescriptionKey" />
 
             <property name="ItemTypeIcon" value="treasure" />
             <property name="Class" value="SecureLoot" />
-            <property name="LootList" value="playerStorage" />
-            <property name="DowngradeBlock" value="cntStorageChest" />
+            <property name="LootList" value="storageCrate" />
+            <property name="DowngradeBlock" value="cntStorageGenericInsecure" />
         </block>
     </append>
 </config>

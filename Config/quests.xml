@@ -39,7 +39,6 @@
                 </modifier>
             </objective>
 
-            <objective type="Craft" id="cntSecureStorageChest" value="1" phase="4" />
             <objective type="Craft" id="terrDirt" value="1" phase="4" />
 
             <objective type="Craft" id="camoChestTerrDirt" value="1" phase="5" />
