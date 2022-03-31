@@ -1,6 +1,6 @@
 # Camo Chests
 
-[![Tested with A20.2 b2](https://img.shields.io/badge/A20.2%20b2-tested-blue.svg)](https://7daystodie.com/)
+[![Tested with A20.3 b3](https://img.shields.io/badge/A20.3%20b3-tested-blue.svg)](https://7daystodie.com/)
 
 7 Days to Die Modlet: Hide chests in plain sight or use terrain camo to defeat xray
 
