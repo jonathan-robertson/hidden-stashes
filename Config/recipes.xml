@@ -1,10 +1,10 @@
 <config>
     <append xpath="/recipes">
-        <recipe name="camoChestTerrDirt" count="1" craft_time="3">
+        <recipe name="buriedStashTerrDirt" count="1" craft_time="3">
             <ingredient name="resourceWood" count="10" />
             <ingredient name="terrDirt" count="1" />
         </recipe>
-        <recipe name="camoChestTerrTopSoil" count="1" craft_time="3">
+        <recipe name="buriedStashTerrTopSoil" count="1" craft_time="3">
             <ingredient name="resourceWood" count="10" />
             <ingredient name="terrTopSoil" count="1" />
         </recipe>

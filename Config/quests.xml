@@ -1,11 +1,11 @@
 <config>
-    <set xpath="/quests/quest[@id='quest_BasicSurvival8']/reward[@type='Quest']/@id">quest_CamoChests</set>
+    <set xpath="/quests/quest[@id='quest_BasicSurvival8']/reward[@type='Quest']/@id">quest_buriedStash</set>
     <append xpath="/quests">
-        <quest id="quest_CamoChests">
+        <quest id="quest_buriedStash">
             <property name="group_name_key" value="quest_BasicSurvival" />
-            <property name="name_key" value="quest_CamoChests" />
-            <property name="subtitle_key" value="quest_CamoChests_subtitle" />
-            <property name="description_key" value="quest_CamoChests_description" />
+            <property name="name_key" value="quest_buriedStash" />
+            <property name="subtitle_key" value="quest_buriedStash_subtitle" />
+            <property name="description_key" value="quest_buriedStash_description" />
             <property name="icon" value="ui_game_symbol_foliage" />
             <property name="category_key" value="quest" />
             <property name="difficulty" value="veryeasy" />
@@ -41,11 +41,11 @@
 
             <objective type="Craft" id="terrDirt" value="1" phase="4" />
 
-            <objective type="Craft" id="camoChestTerrDirt" value="1" phase="5" />
+            <objective type="Craft" id="buriedStashTerrDirt" value="1" phase="5" />
             <objective type="Craft" id="terrTopSoil" value="1" phase="5" />
             <objective type="Craft" id="plantedtreeGrassSeed1" value="1" phase="5" />
 
-            <objective type="BlockPlace" id="camoChestTerrDirt" value="1" phase="6" />
+            <objective type="BlockPlace" id="buriedStashTerrDirt" value="1" phase="6" />
             <objective type="BlockPlace" id="terrTopSoil" value="1" phase="7" />
             <objective type="BlockPlace" id="plantedtreeGrassSeed1" value="1" phase="8" />
 

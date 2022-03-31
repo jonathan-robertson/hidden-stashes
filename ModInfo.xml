@@ -1,7 +1,7 @@
 <xml>
     <ModInfo>
-        <Name value="Camo Chests" />
-        <Description value="Hide chests in plain sight or use terrain camo to defeat xray" />
+        <Name value="Burried Stash" />
+        <Description value="Add buried blocks and recipes stash immune to camera clipping/xray" />
         <Author value="Jonathan Robertson" />
         <Version value="0.2.2" />
         <Website value="https://github.com/fatal-expedition/camo-chests" />

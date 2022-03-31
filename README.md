@@ -1,8 +1,8 @@
-# Camo Chests
+# Buried Stash
 
 [![Tested with A20.3 b3](https://img.shields.io/badge/A20.3%20b3-tested-blue.svg)](https://7daystodie.com/)
 
-7 Days to Die Modlet: Hide chests in plain sight or use terrain camo to defeat xray
+7 Days to Die Modlet: Add buried blocks and recipes stash immune to camera clipping/xray
 
 ## Features
 
