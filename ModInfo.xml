@@ -3,7 +3,7 @@
         <Name value="Camo Chests" />
         <Description value="Hide chests in plain sight or use terrain camo to defeat xray" />
         <Author value="Jonathan Robertson" />
-        <Version value="0.2.0" />
-        <Website value="https://github.com/raid-teams/camo-chests" />
+        <Version value="0.2.1" />
+        <Website value="https://github.com/fatal-expedition/camo-chests" />
     </ModInfo>
 </xml>
