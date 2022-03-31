@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.2] - 2022-03-31
 
-- update storage media to cntStorageGeneric
+- update storage media to cntStorageGenericInsecure
 - adjust recipe to use wood instead of chest
 - update project name to buried-stash
 
