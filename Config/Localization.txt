@@ -1,11 +1,18 @@
 Key,File,Type,english
 
-buriedStashTerrDirt,blocks,Terrain,Stash Hidden in Dirt
-buriedStashTerrDirtDesc,blocks,Terrain,"A dirt block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrDirt,blocks,Terrain,Hidden Stash in Dirt
+hiddenStashTerrDirtDesc,blocks,Terrain,"A dirt block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrTopSoil,blocks,Terrain,Hidden Stash in Topsoil
+hiddenStashTerrTopSoilDesc,blocks,Terrain,"A topsoil block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrAsphalt,blocks,Terrain,Hidden Stash in Asphalt
+hiddenStashTerrAsphaltDesc,blocks,Terrain,"An asphalt block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrDestroyedStone,blocks,Terrain,Hidden Stash in Destroyed Stone
+hiddenStashTerrDestroyedStoneDesc,blocks,Terrain,"A destroyed stone block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrGravel,blocks,Terrain,Hidden Stash in Gravel
+hiddenStashTerrGravelDesc,blocks,Terrain,"A gravel block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrStone,blocks,Terrain,Hidden Stash in Stone
+hiddenStashTerrStoneDesc,blocks,Terrain,"A stone block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
 
-buriedStashTerrTopSoil,blocks,Terrain,Stash Hidden in Topsoil
-buriedStashTerrTopSoilDesc,blocks,Terrain,"A topsoil block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[ff9900]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[ffffff] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
-
-quest_buriedStash,Quest,Quest Info,Buried Stash
-quest_buriedStash_description,Quest,Quest Info,"We used to have banks, but now all that's left is the cold, dead ground.\n\nCraft a stone shovel and stash your goods underground using a special method."
-quest_buriedStash_subtitle,Quest,Quest Info,How to Hide Your Goodies
+quest_hiddenStash,Quest,Quest Info,Buried Stash
+quest_hiddenStash_description,Quest,Quest Info,"We used to have banks, but now all that's left is the cold, dead ground.\n\nCraft a stone shovel and stash your goods underground using a special container."
+quest_hiddenStash_subtitle,Quest,Quest Info,How to Hide Your Goodies

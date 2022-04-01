@@ -1,6 +1,6 @@
 <config>
     <append xpath="/blocks">
-        <block name="buriedStashTerrDirt">
+        <block name="hiddenStashTerrDirt">
             <property name="Extends" value="terrDirt" param1="DescriptionKey" />
             <property name="CustomIcon" value="terrDirt" />
 
@@ -9,8 +9,44 @@
             <property name="LootList" value="storageCrate" />
             <property name="DowngradeBlock" value="cntStorageGenericInsecure" />
         </block>
-        <block name="buriedStashTerrTopSoil">
+        <block name="hiddenStashTerrTopSoil">
             <property name="Extends" value="terrTopSoil" param1="DescriptionKey" />
+
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="SecureLoot" />
+            <property name="LootList" value="storageCrate" />
+            <property name="DowngradeBlock" value="cntStorageGenericInsecure" />
+        </block>
+        <block name="hiddenStashTerrAsphalt">
+            <property name="Extends" value="terrAsphalt" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrAsphalt" />
+
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="SecureLoot" />
+            <property name="LootList" value="storageCrate" />
+            <property name="DowngradeBlock" value="cntStorageGenericInsecure" />
+        </block>
+        <block name="hiddenStashTerrDestroyedStone">
+            <property name="Extends" value="terrDestroyedStone" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrDestroyedStone" />
+
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="SecureLoot" />
+            <property name="LootList" value="storageCrate" />
+            <property name="DowngradeBlock" value="cntStorageGenericInsecure" />
+        </block>
+        <block name="hiddenStashTerrGravel">
+            <property name="Extends" value="terrGravel" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrGravel" />
+
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="SecureLoot" />
+            <property name="LootList" value="storageCrate" />
+            <property name="DowngradeBlock" value="cntStorageGenericInsecure" />
+        </block>
+        <block name="hiddenStashTerrStone">
+            <property name="Extends" value="terrStone" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrStone" />
 
             <property name="ItemTypeIcon" value="treasure" />
             <property name="Class" value="SecureLoot" />
