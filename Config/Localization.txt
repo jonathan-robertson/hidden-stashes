@@ -17,5 +17,5 @@ quest_hiddenStash1,Quest,Quest Info,Hidden Stashes 1/2
 quest_hiddenStash1_description,Quest,Quest Info,"We used to have banks, but now all that's left is the cold, dead ground.\n\nCraft a stone shovel and gather the resources necessary to create your first Hidden Stash.\n\nFor clay, try diggin 2 blocks deep into the ground - you'll need that for your next step."
 quest_hiddenStash1_subtitle,Quest,Quest Info,Gather the Resources
 quest_hiddenStash2,Quest,Quest Info,Hidden Stashes 2/8
-quest_hiddenStash2_description,Quest,Quest Info,"Hidden Stashes are most effective when buried underground.\n\nUsing the 2-block deep hole in the terrain you dug earlier:\n1. place your 'Hidden Stash in Dirt' at the bottom of the hold\n2. cover the rest of the hole up with your topsoil block\n3. plant some grass seeds on top to help it blend in"
+quest_hiddenStash2_description,Quest,Quest Info,"Hidden Stashes are most effective when buried underground.\n\nUsing the 2-block deep hole in the terrain you dug earlier:\n1. place your 'Hidden Stash in Dirt' at the bottom of the hole.\n2. cover the rest of the hole up with your topsoil block.\n3. plant some grass seeds on top to help it blend in with the environment."
 quest_hiddenStash2_subtitle,Quest,Quest Info,Hide Your Goodies
