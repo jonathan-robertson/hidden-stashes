@@ -9,8 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - update storage media to cntStorageGenericInsecure
 - adjust recipe to use wood instead of chest
-- update project name to buried-stash
-- add remaining buried stash terrain types
+- update project name to hidden-stashes
+- add remaining hidden stash terrain types
+- fix null index exception on quest page
 
 ## [0.2.1] - 2022-03-31
 
