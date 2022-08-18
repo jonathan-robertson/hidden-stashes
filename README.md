@@ -1,6 +1,6 @@
 # Hidden Stashes
 
-[![Tested with A20.3 b3](https://img.shields.io/badge/A20.3%20b3-tested-blue.svg)](https://7daystodie.com/)
+## [![🧪 Tested On](https://img.shields.io/badge/🧪%20Tested%20On-A20.6%20b9-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/fatal-expedition/hidden-stashes/actions/workflows/release.yml/badge.svg)](https://github.com/fatal-expedition/hidden-stashes/actions/workflows/release.yml)
 
 7 Days to Die Modlet: Add hidden stashes immune to camera clipping/xray
 
