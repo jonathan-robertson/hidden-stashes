@@ -1,0 +1,7 @@
+<config>
+    <append xpath="/buffs/buff[@name='buffStatusCheck02']">
+        <effect_group name="hidden-stashes-journal-entries">
+            <triggered_effect trigger="onSelfEnteredGame" action="AddJournalEntry" journal="hiddenStashesTip01" />
+        </effect_group>
+    </append>
+</config>
