@@ -1,8 +1,18 @@
 # Hidden Stashes
 
-## [![🧪 Tested On](https://img.shields.io/badge/🧪%20Tested%20On-A20.6%20b9-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/fatal-expedition/hidden-stashes/actions/workflows/release.yml/badge.svg)](https://github.com/fatal-expedition/hidden-stashes/actions/workflows/release.yml)
+[![🧪 Tested On](https://img.shields.io/badge/🧪%20Tested%20On-A21%20b313-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/jonathan-robertson/hidden-stashes/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/hidden-stashes/actions/workflows/release.yml)
 
-7 Days to Die Modlet: Add hidden stashes immune to camera clipping/xray
+- [Hidden Stashes](#hidden-stashes)
+  - [Summary](#summary)
+  - [Features](#features)
+    - [Can other players still interact with my stash?](#can-other-players-still-interact-with-my-stash)
+  - [Usage](#usage)
+
+## Summary
+
+Add hidden stashes immune to detection by camera clipping/xray.
+
+📺 [Introductory video and demonstration of how it works](https://youtu.be/SvvSQayCzdM)
 
 ## Features
 
@@ -21,12 +31,3 @@ But if someone attempts to exploit by camera clipping (xray), they will not be a
 ## Usage
 
 Simply search "hidden" in the crafting menu to see all new hidden stash recipes.
-
-## New Chests which look like
-
-1. Topsoil
-2. Dirt
-3. Asphalt
-4. Destroyed Stone
-5. Gravel
-6. Stone
