@@ -11,6 +11,7 @@
             <property name="difficulty" value="veryeasy" />
             <property name="offer_key" value="quest_BasicSurvival_offer" />
             <property name="shareable" value="false" />
+            <property name="quest_hints" value="quest_hiddenStash1_hint1,quest_hiddenStash1_hint2,quest_hiddenStash1_hint3" />
 
             <objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1">
                 <modifier type="TrackBlocks">
@@ -21,7 +22,7 @@
             </objective>
             <objective type="FetchKeep" id="resourceWood" value="13" phase="1">
                 <modifier type="TrackBlocks">
-                    <property name="block_index_name" value="quest_wood" />
+                    <property name="block_index_name" value="quest_wood_trees" />
                     <property name="nav_object" value="quest_resource" />
                     <property name="track_distance" value="20" />
                 </modifier>
@@ -45,6 +46,7 @@
             <property name="difficulty" value="veryeasy" />
             <property name="offer_key" value="quest_BasicSurvival_offer" />
             <property name="shareable" value="false" />
+            <property name="quest_hints" value="quest_hiddenStash2_hint1,quest_hiddenStash2_hint2,quest_hiddenStash2_hint3,quest_hiddenStash2_hint4,quest_hiddenStash2_hint5" />
 
             <objective type="Craft" id="terrDirt" value="1" phase="1" />
 

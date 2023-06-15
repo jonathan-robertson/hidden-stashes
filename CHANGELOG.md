@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2023-06-14
 
+- add quest hints to clarify steps
 - update readme
 - update to a21 mod-info file format
 
