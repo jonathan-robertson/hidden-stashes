@@ -1,9 +1,8 @@
 <xml>
-    <ModInfo>
-        <Name value="Hidden Stashes" />
-        <Description value="Add hidden stashes immune to camera clipping/xray" />
-        <Author value="Jonathan Robertson" />
-        <Version value="1.1.0" />
-        <Website value="https://github.com/fatal-expedition/hidden-stashes" />
-    </ModInfo>
+    <Name value="kanaverum-hidden-stashes" />
+    <DisplayName value="Hidden Stashes" />
+    <Version value="2.0.0" />
+    <Description value="Add hidden stashes immune to camera clipping/xray" />
+    <Author value="Jonathan Robertson" />
+    <Website value="https://github.com/jonathan-robertson/hidden-stashes" />
 </xml>
