@@ -1,0 +1,55 @@
+<config>
+    <append xpath="/gameevents/action_sequence[@name='game_first_spawn']">
+        <action class="AddJournalTip">
+            <property name="tip_name" value="hiddenStashesTip01" />
+            <property name="show_window" value="false" />
+            <property name="phase" value="4" />
+        </action>
+    </append>
+
+    <append xpath="/gameevents">
+        <action_sequence name="detect_hidden_stashes_level_1">
+            <property name="allow_user_trigger" value="false" />
+            <property name="action_type" value="Game" />
+            <action class="AddQuest">
+                <property name="quest" value="quest_detectHiddenStashesLevel1" />
+                <property name="phase" value="1" />
+            </action>
+        </action_sequence>
+        <action_sequence name="detect_hidden_stashes_level_2">
+            <property name="allow_user_trigger" value="false" />
+            <property name="action_type" value="Game" />
+            <action class="AddQuest">
+                <property name="quest" value="quest_detectHiddenStashesLevel2" />
+                <property name="phase" value="1" />
+            </action>
+        </action_sequence>
+        <action_sequence name="detect_hidden_stashes_level_3">
+            <property name="allow_user_trigger" value="false" />
+            <property name="action_type" value="Game" />
+            <action class="AddQuest">
+                <property name="quest" value="quest_detectHiddenStashesLevel3" />
+                <property name="phase" value="1" />
+            </action>
+        </action_sequence>
+        <action_sequence name="detect_hidden_stashes_cancel">
+            <property name="allow_user_trigger" value="false" />
+            <property name="action_type" value="Game" />
+            <action class="FailQuest">
+                <property name="quest" value="quest_detectHiddenStashesLevel1" />
+                <property name="remove_quest" value="true" />
+                <property name="phase" value="1" />
+            </action>
+            <action class="FailQuest">
+                <property name="quest" value="quest_detectHiddenStashesLevel2" />
+                <property name="remove_quest" value="true" />
+                <property name="phase" value="1" />
+            </action>
+            <action class="FailQuest">
+                <property name="quest" value="quest_detectHiddenStashesLevel3" />
+                <property name="remove_quest" value="true" />
+                <property name="phase" value="1" />
+            </action>
+        </action_sequence>
+    </append>
+</config>

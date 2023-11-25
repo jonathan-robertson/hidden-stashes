@@ -1,0 +1,33 @@
+Key,File,Type,english
+
+hiddenStashesTip01_title,Journal Tip,,"Hidden Stashes [FF8000][MOD]"
+hiddenStashesTip01,Journal Tip,,"Hidden Stashes are containers you can craft, made to look like terrain.\n\nWhen buried underground and surrounded by other forms of terrain, they will stop rendering into the world, [00FF80]making it impossible to interact with them or see them with camera clipping exploits (xray)[-] until they're dug up again.\n\nKeep in mind that [FF0000]other players can access your hidden stashes as well[-], so here are some tips:\n  1. Monitor your surroundings for other players before accessing your stash\n  2. For maximum safety, bury your stash at least 2 blocks deep\n\nThese hidden stashes can be crafted to blend in with [00FF80]Topsoil[-], [00FF80]Dirt[-], [00FF80]Asphalt[-], [00FF80]Destroyed Stone[-], [00FF80]Gravel[-], or [00FF80]Stone[-].\n\nSimply search '[FF8000]hidden[-]' in the crafting menu to see these new hidden stash recipes."
+
+hiddenStashTerrDirt,blocks,Terrain,"Hidden Stash in Dirt"
+hiddenStashTerrDirtDesc,blocks,Terrain,"A dirt block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[FF8000]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[-] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrTopSoil,blocks,Terrain,"Hidden Stash in Topsoil"
+hiddenStashTerrTopSoilDesc,blocks,Terrain,"A topsoil block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[FF8000]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[-] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrAsphalt,blocks,Terrain,"Hidden Stash in Asphalt"
+hiddenStashTerrAsphaltDesc,blocks,Terrain,"An asphalt block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[FF8000]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[-] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrDestroyedStone,blocks,Terrain,"Hidden Stash in Destroyed Stone"
+hiddenStashTerrDestroyedStoneDesc,blocks,Terrain,"A destroyed stone block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[FF8000]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[-] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrGravel,blocks,Terrain,"Hidden Stash in Gravel"
+hiddenStashTerrGravelDesc,blocks,Terrain,"A gravel block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[FF8000]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[-] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+hiddenStashTerrStone,blocks,Terrain,"Hidden Stash in Stone"
+hiddenStashTerrStoneDesc,blocks,Terrain,"A stone block concealing a hidden compartment, making it undetectable when buried.\n\nPress & hold [action:local:Activate][action:permanent:Activate] to lock it or set a combination.\n\n[FF8000]When placed underground properly, your chest can no longer be detected with camera clipping (xray).[-] Be sure to avoid placing chests near questing locations and keep watch for other players or you might return later to find that your chest is gone."
+
+quest_hiddenStash1,Quest,Quest Info,"Hidden Stashes 1/2"
+quest_hiddenStash1_description,Quest,Quest Info,"We used to have banks, but now all that's left is the cold, dead ground.\n\nCraft a stone shovel and dig a pit necessary to conceal your first Hidden Stash.\n\nFor clay, try digging 2 blocks deep into the ground - you'll need that for your next step."
+quest_hiddenStash1_subtitle,Quest,Quest Info,"Using a Hidden Stash"
+quest_hiddenStash1_hint1,Quest,Quest Info,"[FFB400]Look for [-][FFFF00]yellow [-][FFB400]navigation icons to find resources.[-]"
+quest_hiddenStash1_hint2,Quest,Quest Info,"[00FF00]Open [-][FFB400]the crafting menu [FFB400][action:local:Inventory][action:permanent:Inventory] to craft a [-][00FF00]Stone Shovel[-][FFB400].[-]"
+quest_hiddenStash1_hint3,Quest,Quest Info,"[FFB400]Use the [-][00FF00]Stone Shovel [-][FFB400]to dig up some clay from the Forest floor. Be sure to make your hole 2 meters deep.[-]"
+
+quest_hiddenStash2,Quest,Quest Info,"Hidden Stashes 2/8"
+quest_hiddenStash2_description,Quest,Quest Info,"Hidden Stashes are most effective when buried underground.\n\nUsing the 2-block deep hole in the terrain you dug earlier:\n1. place your 'Hidden Stash in Dirt' at the bottom of the hole.\n2. cover the rest of the hole up with your topsoil block.\n3. plant some grass seeds on top to help it blend in with the environment."
+quest_hiddenStash2_subtitle,Quest,Quest Info,"Hiding in Plain Sight"
+quest_hiddenStash2_hint1,Quest,Quest Info,"[00FF00]Open [-][FFB400]the crafting menu [FFB400][action:local:Inventory][action:permanent:Inventory] to craft [-][00FF00]Dirt[-][FFB400].[-]"
+quest_hiddenStash2_hint2,Quest,Quest Info,"[FFB400]Next, craft the listed items. You can close/re-open the crafting menu [FFB400][action:local:Inventory][action:permanent:Inventory] to sort these items to the top.[-]"
+quest_hiddenStash2_hint3,Quest,Quest Info,"[FFB400]Place the [00FF00]Hidden Stash in Dirt[-] at the bottom of the hole you created.[-]"
+quest_hiddenStash2_hint4,Quest,Quest Info,"[FFB400]Save a waypoint for this stash on your map [FFB400][action:permanent:Map][-] so you can find it again later. Then place the [00FF00]Topsoil[-] on top of this stash to cover it up.[-]"
+quest_hiddenStash2_hint5,Quest,Quest Info,"[FFB400]If your pile looks obvious, strike it with your [00FF00]Stone Shovel[-] or [00FF00]Stone Axe[-] to smooth it out. Then place the [00FF00]Grass (Seed)[-] on top.[-]"

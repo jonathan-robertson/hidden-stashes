@@ -54,11 +54,5 @@
             <property name="Class" value="Loot" />
             <property name="LootList" value="hiddenStashStorage" />
         </block>
-
-        <block name="hiddenStash_placeholder">
-            <!-- only used as a placeholder for detection quests so the quest doesn't complete on pickup -->
-            <property name="Extends" value="terrDirt" />
-            <property name="CreativeMode" value="None" />
-        </block>
     </append>
 </config>

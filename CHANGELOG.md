@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2023-11-25
+
+- add note on how to change container size
+- add treasure-hunter perk detection feature
+- add variant configs to provide options for admins
+- fix add tooltip on first join
+- refresh journal entry verbiage
+- remove wood from stash recipes
+- update to insecure stashes
+- update to thematic stash interaction sounds
+
 ## [2.0.1] - 2023-11-21
 
 - test/indicate support for a21.2 b30 (stable)
