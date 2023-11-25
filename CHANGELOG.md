@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add tooltip on first join
 - refresh journal entry verbiage
 - remove wood from stash recipes
+- update to insecure stashes
+- update to thematic stash interaction sounds
 
 ## [2.0.1] - 2023-11-21
 
