@@ -20,7 +20,7 @@
                     <property name="track_distance" value="20" />
                 </modifier>
             </objective>
-            <objective type="FetchKeep" id="resourceWood" value="13" phase="1">
+            <objective type="FetchKeep" id="resourceWood" value="3" phase="1">
                 <modifier type="TrackBlocks">
                     <property name="block_index_name" value="quest_wood_trees" />
                     <property name="nav_object" value="quest_resource" />

@@ -1,27 +1,21 @@
 <config>
     <append xpath="/recipes">
         <recipe name="hiddenStashTerrDirt" count="1" craft_time="3">
-            <ingredient name="resourceWood" count="10" />
             <ingredient name="terrDirt" count="1" />
         </recipe>
         <recipe name="hiddenStashTerrTopSoil" count="1" craft_time="3">
-            <ingredient name="resourceWood" count="10" />
             <ingredient name="terrTopSoil" count="1" />
         </recipe>
         <recipe name="hiddenStashTerrAsphalt" count="1" craft_time="3">
-            <ingredient name="resourceWood" count="10" />
             <ingredient name="terrAsphalt" count="1" />
         </recipe>
         <recipe name="hiddenStashTerrDestroyedStone" count="1" craft_time="3">
-            <ingredient name="resourceWood" count="10" />
             <ingredient name="terrDestroyedStone" count="1" />
         </recipe>
         <recipe name="hiddenStashTerrGravel" count="1" craft_time="3">
-            <ingredient name="resourceWood" count="10" />
             <ingredient name="terrGravel" count="1" />
         </recipe>
         <recipe name="hiddenStashTerrStone" count="1" craft_time="3">
-            <ingredient name="resourceWood" count="10" />
             <ingredient name="terrStone" count="1" />
         </recipe>
     </append>
