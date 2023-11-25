@@ -28,7 +28,7 @@
 ## Features
 
 - ⚙️ Adds a variety of new crafting recipes and chests that can be placed to blend in with the environment.
-  - Terrain blocks (when surrounded by other terrain) will stop rendering colliding surfaces. __**This fully defeats camera clipping (xray) and [will prevent players from exploiting it to find your hidden stashes](https://youtu.be/SvvSQayCzdM).**__
+  - 🩻 Terrain blocks (when surrounded by other terrain) will stop rendering colliding surfaces. __**This fully defeats camera clipping (xray) and [will prevent players from exploiting it to find your hidden stashes](https://youtu.be/SvvSQayCzdM).**__
 - 📝 Adds a tutorial phase to the getting started guide to walk players through crafting and placing their first hidden stashes.
 - ☠️ Updates `Treasure Hunter` to also be capable of detecting Hidden Stashes nearby. This can be helpful for locating your own stash if you forget to mark it on the map, or for finding the stash of your opponent.
   - ⏳ With this skill, the player is required to crouch and stay completely still to focus on nearby stashes for an extender period of time (even firing a weapon, reloading, or using an item would interrupt focus and reset the timer).
@@ -95,4 +95,4 @@ Single Player Game | Yes | no | self (of course)
 
 ## Special Thanks
 
-- 🎉 Much thanks to `Zipcore` for suggesting a method to temporarily detect Hidden Stashes via nav markers!
+- 🎉 Much thanks to @Zipcore for suggesting a method to temporarily detect Hidden Stashes via quests and nav markers!
