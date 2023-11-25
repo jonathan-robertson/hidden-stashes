@@ -1,0 +1,58 @@
+<config>
+    <append xpath="/blocks">
+        <block name="hiddenStashTerrDirt">
+            <property name="Extends" value="terrDirt" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrDirt" />
+
+            <property name="IndexName" value="hiddenStash" />
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="Loot" />
+            <property name="LootList" value="hiddenStashStorage" />
+        </block>
+
+        <block name="hiddenStashTerrTopSoil">
+            <property name="Extends" value="terrTopSoil" param1="DescriptionKey" />
+
+            <property name="IndexName" value="hiddenStash" />
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="Loot" />
+            <property name="LootList" value="hiddenStashStorage" />
+        </block>
+        <block name="hiddenStashTerrAsphalt">
+            <property name="Extends" value="terrAsphalt" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrAsphalt" />
+
+            <property name="IndexName" value="hiddenStash" />
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="Loot" />
+            <property name="LootList" value="hiddenStashStorage" />
+        </block>
+        <block name="hiddenStashTerrDestroyedStone">
+            <property name="Extends" value="terrDestroyedStone" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrDestroyedStone" />
+
+            <property name="IndexName" value="hiddenStash" />
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="Loot" />
+            <property name="LootList" value="hiddenStashStorage" />
+        </block>
+        <block name="hiddenStashTerrGravel">
+            <property name="Extends" value="terrGravel" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrGravel" />
+
+            <property name="IndexName" value="hiddenStash" />
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="Loot" />
+            <property name="LootList" value="hiddenStashStorage" />
+        </block>
+        <block name="hiddenStashTerrStone">
+            <property name="Extends" value="terrStone" param1="DescriptionKey" />
+            <property name="CustomIcon" value="terrStone" />
+
+            <property name="IndexName" value="hiddenStash" />
+            <property name="ItemTypeIcon" value="treasure" />
+            <property name="Class" value="Loot" />
+            <property name="LootList" value="hiddenStashStorage" />
+        </block>
+    </append>
+</config>
