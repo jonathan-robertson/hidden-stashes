@@ -9,6 +9,7 @@
     - [Can other players still interact with my stash?](#can-other-players-still-interact-with-my-stash)
   - [Usage](#usage)
     - [No Treasure Hunter Perk Variant](#no-treasure-hunter-perk-variant)
+    - [Container Size Adjustments](#container-size-adjustments)
   - [Setup](#setup)
     - [Environment / EAC / Hosting Requirements](#environment--eac--hosting-requirements)
     - [Map Considerations for Installation or Uninstallation](#map-considerations-for-installation-or-uninstallation)
@@ -56,6 +57,11 @@
 - ℹ️ Once copied/overwritten, this mod will no longer include the changes to `Treasure Hunter` (meaning that players will have no way of detecting Hidden Stashes other than digging and directly interacting with them).
 - 🛠️ You can make this change at any time, even in an active map! Restarting the server will cause the change to go into effect and will not cause harm to your map or world save in any way.
   - ✅ If you later decide to add the perk back, you can do so by copying `Config/default-with-perk` into `Config` - again, without causing any harm to your ongoing map.
+
+### Container Size Adjustments
+
+- 🛠️ If you aren't happy with the container size of the hidden stashes (maybe you want them larger or smaller), you can easily adjust this by modifying the `size` field in `Config/loot.xml`.
+  - ✅ Changing this value will have *no* negative effect on an existing map; just keep in mind that any stashes already placed will have the *original* size values before your change.
 
 ## Setup
 

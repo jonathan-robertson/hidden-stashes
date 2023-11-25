@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.1.0] - 2023-11-25
 
+- add note on how to change container size
 - add tooltip on first join
 - add treasure-hunter perk detection feature
 - add variant configs to provide options for admins
