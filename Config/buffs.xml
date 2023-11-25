@@ -3,5 +3,210 @@
         <effect_group name="hidden-stashes-journal-entries">
             <triggered_effect trigger="onSelfEnteredGame" action="AddJournalEntry" journal="hiddenStashesTip01" />
         </effect_group>
+
+        <effect_group name="add-detect-hidden-stashes-timer">
+            <requirements>
+                <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="GTE" value="1" />
+            </requirements>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDetectingHiddenStashesController" />
+            <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffDetectingHiddenStashesController" />
+        </effect_group>
+        <effect_group name="rem-detect-hidden-stashes-timer">
+            <requirements>
+                <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="0" />
+            </requirements>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDetectingHiddenStashesController" />
+            <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffDetectingHiddenStashesController" />
+        </effect_group>
+    </append>
+
+    <append xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group">
+        <triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffDetectingHiddenStashesController">
+            <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="GTE" value="1" />
+        </triggered_effect>
+        <triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffResetHiddenStashDetection">
+            <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="0" />
+        </triggered_effect>
+    </append>
+
+    <append xpath="/buffs">
+        <buff name="buffResetHiddenStashDetection" hidden="true">
+            <duration value="0" />
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$detectingHiddenStashesTimer" operation="set" value="0" />
+
+                <!-- cancel quests if any were activated -->
+                <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="detect_hidden_stashes_cancel">
+                    <requirement name="HasBuff" buff="buffDetectedHiddenStashes" />
+                </triggered_effect>
+
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDetectingHiddenStashes" />
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDetectedHiddenStashes" />
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffResetHiddenStashDetection" />
+
+                <!-- retire even the controller if we no longer have the skill necessary to use it -->
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDetectingHiddenStashesController">
+                    <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="0" />
+                </triggered_effect>
+            </effect_group>
+        </buff>
+
+        <buff name="buffDetectingHiddenStashesController" hidden="true">
+            <duration value="0" />
+
+            <effect_group name="startup">
+                <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfRespawn" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfLeaveGame" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfTeleported" action="AddBuff" buff="buffResetHiddenStashDetection" />
+            </effect_group>
+
+            <effect_group name="warmup">
+                <requirements>
+                    <requirement name="NotHasBuff" buff="buffDetectedHiddenStashes" />
+                    <requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1" />
+                </requirements>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$detectingHiddenStashesTimer" operation="add" value="1" />
+
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".detectingHiddenStashesTimerDisplay" operation="set" value="45">
+                    <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="1" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".detectingHiddenStashesTimerDisplay" operation="set" value="35">
+                    <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="2" />
+                </triggered_effect>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".detectingHiddenStashesTimerDisplay" operation="set" value="25">
+                    <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="3" />
+                </triggered_effect>
+
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".detectingHiddenStashesTimerDisplay" operation="subtract" value="@$detectingHiddenStashesTimer" />
+            </effect_group>
+
+            <effect_group name="display-detection-progress">
+                <requirements>
+                    <requirement name="NotHasBuff" buff="buffDetectedHiddenStashes" />
+                    <requirement name="CVarCompare" cvar="$detectingHiddenStashesTimer" operation="GTE" value="3" />
+                </requirements>
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDetectingHiddenStashes" />
+            </effect_group>
+
+            <effect_group name="promote_to_level_1">
+                <requirements>
+                    <requirement name="HasBuff" buff="buffDetectingHiddenStashes" />
+                    <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="1" />
+                    <requirement name="CVarCompare" cvar="$detectingHiddenStashesTimer" operation="gte" value="45" />
+                </requirements>
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDetectedHiddenStashes" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="detect_hidden_stashes_level_1" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetectingHiddenStashes" />
+            </effect_group>
+
+            <effect_group name="promote_to_level_2">
+                <requirements>
+                    <requirement name="HasBuff" buff="buffDetectingHiddenStashes" />
+                    <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="2" />
+                    <requirement name="CVarCompare" cvar="$detectingHiddenStashesTimer" operation="gte" value="35" />
+                </requirements>
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDetectedHiddenStashes" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="detect_hidden_stashes_level_2" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetectingHiddenStashes" />
+            </effect_group>
+
+            <effect_group name="promote_to_level_3">
+                <requirements>
+                    <requirement name="HasBuff" buff="buffDetectingHiddenStashes" />
+                    <requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="Equals" value="3" />
+                    <requirement name="CVarCompare" cvar="$detectingHiddenStashesTimer" operation="gte" value="25" />
+                </requirements>
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDetectedHiddenStashes" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="detect_hidden_stashes_level_3" />
+                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDetectingHiddenStashes" />
+            </effect_group>
+
+            <effect_group name="cancel">
+                <triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onOtherHealedSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onProjectileImpact" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfDamagedSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfHealedSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfDied" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onOtherKilledSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onBlockKilledSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfKilledSelf" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfExplosionAttackedOther" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfExplosionMissEntity" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfRepairBlock" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfUpgradedBlock" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfHarvestBlock" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfHarvestOther" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onReloadStart" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onReloadUpdate" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onReloadStop" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfLandJump" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfFallImpact" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfRun" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfWalk" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfStand" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfAimingGunStop" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfCrouchRun" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfCrouchWalk" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfSwimStart" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfSwimStop" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfWaterSubmerge" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfWaterSurface" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfSwimRun" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfSwimIdle" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfHoldingItemThrown" action="AddBuff" buff="buffResetHiddenStashDetection" />
+
+                <triggered_effect trigger="onSelfLootContainer" action="AddBuff" buff="buffResetHiddenStashDetection" />
+                <triggered_effect trigger="onSelfOpenLootContainer" action="AddBuff" buff="buffResetHiddenStashDetection" />
+            </effect_group>
+        </buff>
+
+        <buff name="buffDetectingHiddenStashes" name_key="buffDetectingHiddenStashesName" description_key="buffDetectingHiddenStashesDesc" icon="ui_game_symbol_treasure" icon_color="255,255,255" icon_blink="true" hidden="false">
+            <duration value="0" />
+            <display_value value=".detectingHiddenStashesTimerDisplay" />
+            <display_value_format value="time" />
+        </buff>
+
+        <buff name="buffDetectedHiddenStashes" name_key="buffDetectedHiddenStashesName" description_key="buffDetectedHiddenStashesDesc" icon="ui_game_symbol_treasure" icon_color="255,255,0" icon_blink="false" hidden="false">
+            <duration value="0" />
+        </buff>
     </append>
 </config>

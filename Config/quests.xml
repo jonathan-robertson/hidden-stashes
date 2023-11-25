@@ -61,5 +61,66 @@
             <reward type="Exp" value="50" />
             <reward type="Quest" id="quest_whiteRiverCitizen1" />
         </quest>
+
+        <quest id="quest_detectHiddenStashesLevel1">
+            <property name="name_key" value="quest_detectHiddenStashes" />
+            <property name="subtitle_key" value="quest_detectHiddenStashes_subtitle" />
+            <property name="description_key" value="quest_detectHiddenStashes_description" />
+            <property name="icon" value="ui_game_symbol_treasure" />
+            <property name="category_key" value="challenge" />
+            <property name="offer_key" value="quest_detectHiddenStashes_description" />
+            <property name="difficulty" value="veryeasy" />
+            <property name="shareable" value="false" />
+            <property name="repeatable" value="true" />
+            <property name="quest_hints" value="quest_detectHiddenStashes_hint1" />
+
+            <objective type="FetchKeep" id="hiddenStash_placeholder" value="1" phase="1">
+                <modifier type="TrackBlocks">
+                    <property name="block_index_name" value="hiddenStash" />
+                    <property name="nav_object" value="detectHiddenStashesLevel1" />
+                    <property name="track_distance" value="3" />
+                </modifier>
+            </objective>
+        </quest>
+        <quest id="quest_detectHiddenStashesLevel2">
+            <property name="name_key" value="quest_detectHiddenStashes" />
+            <property name="subtitle_key" value="quest_detectHiddenStashes_subtitle" />
+            <property name="description_key" value="quest_detectHiddenStashes_description" />
+            <property name="icon" value="ui_game_symbol_treasure" />
+            <property name="category_key" value="challenge" />
+            <property name="offer_key" value="quest_detectHiddenStashes_description" />
+            <property name="difficulty" value="veryeasy" />
+            <property name="shareable" value="false" />
+            <property name="repeatable" value="true" />
+            <property name="quest_hints" value="quest_detectHiddenStashes_hint1" />
+
+            <objective type="FetchKeep" id="hiddenStash_placeholder" value="1" phase="1">
+                <modifier type="TrackBlocks">
+                    <property name="block_index_name" value="hiddenStash" />
+                    <property name="nav_object" value="detectHiddenStashesLevel2" />
+                    <property name="track_distance" value="4" />
+                </modifier>
+            </objective>
+        </quest>
+        <quest id="quest_detectHiddenStashesLevel3">
+            <property name="name_key" value="quest_detectHiddenStashes" />
+            <property name="subtitle_key" value="quest_detectHiddenStashes_subtitle" />
+            <property name="description_key" value="quest_detectHiddenStashes_description" />
+            <property name="icon" value="ui_game_symbol_treasure" />
+            <property name="category_key" value="challenge" />
+            <property name="offer_key" value="quest_detectHiddenStashes_description" />
+            <property name="difficulty" value="veryeasy" />
+            <property name="shareable" value="false" />
+            <property name="repeatable" value="true" />
+            <property name="quest_hints" value="quest_detectHiddenStashes_hint1" />
+
+            <objective type="FetchKeep" id="hiddenStash_placeholder" value="1" phase="1">
+                <modifier type="TrackBlocks">
+                    <property name="block_index_name" value="hiddenStash" />
+                    <property name="nav_object" value="detectHiddenStashesLevel3" />
+                    <property name="track_distance" value="5" />
+                </modifier>
+            </objective>
+        </quest>
     </append>
 </config>

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.1.0] - ?
 
 - add tooltip on first join
+- add treasure-hunter perk detection feature
 - refresh journal entry verbiage
 - remove wood from stash recipes
 - update to insecure stashes
